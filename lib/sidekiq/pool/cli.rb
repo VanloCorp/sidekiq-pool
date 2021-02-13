@@ -52,7 +52,7 @@ module Sidekiq
         if @system_booted
           logger.info "#{::Process.pid} - environment already started"
         else
-          super
+          boot_application
           @system_booted = true
         end
       end
